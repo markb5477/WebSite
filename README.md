@@ -1,2 +1,0 @@
-# WebSite
-Website for myself :^)
