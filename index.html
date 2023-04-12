@@ -43,14 +43,14 @@ https://templatemo.com/tm-531-reflux
             </div>
             <div class="author-content">
               <h4>Mark Brandt</h4>
-              <span>ComputerScience Student</span>
+              <span>Student at UCPH</span>
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
                 <li><a href="#section1">About Me</a></li>
-                <li><a href="#section2">What I’m good at </a></li>
+                <li><a href="#section4">Contact Me </a></li>
                 <!--<li><a href="#section3">My Work</a></li> -->
-                <li><a href="#section4">Contact Me</a></li>
+                <li><a href="#section4">My blog</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -82,9 +82,10 @@ https://templatemo.com/tm-531-reflux
         <div class="container">
           <div class="section-heading">
             <h2>About Me</h2>
+            <!--
             <div class="line-dec"></div>
-            <span>i'am a </span>
-            <span class="mySpan"></span> <!-- This evaluetes to my age  -->
+            <span><br> i'am a </span>
+            <span class="mySpan"></span>
             <script>
             var age = 20;
             function getAge() {
@@ -95,38 +96,62 @@ https://templatemo.com/tm-531-reflux
             }
             function checkDate() {
                 var today = new Date();
-                var Birthday = today.getMonth() === 9 && today.getDate() === 30;
+                var Birthday = today.getMonth() === 8 && today.getDate() === 30;
                 if (Birthday) {
                     incrementAge();
                 }
             }
             setInterval(checkDate, 24 * 60 * 60 * 1000); // Check every day
-              document.querySelector('.mySpan').innerHTML = age;
+            document.querySelector('.mySpan').innerHTML = age;
             </script>
-            <span> year old guy who likes to code</span>
+            <span> 
+              year old guy, who studies computer science at Nørre Campus in Copenhagen 
+
+            </span>
+          -->
 
 
           </div>
           <div class="left-image-post">
             <div class="row">
+            
               <div class="col-md-6">
-                <div class="left-image">
+                <div class="right-image">
                   <img src="assets/images/left-image.jpg" alt="" />
                 </div>
               </div>
+            
               <div class="col-md-6">
                 <div class="right-text">
-                  <h4>Reflux HTML CSS Template</h4>
+                  <h4>Who am I?</h4>
+                  <p class="mySpan"></p>
+                    <script>
+                    var age = 20;
+                    function getAge() {
+                        return age.toString();
+                    }
+                    function incrementAge() {
+                        age++;
+                    }
+                    function checkDate() {
+                        var today = new Date();
+                        var Birthday = today.getMonth() === 8 && today.getDate() === 30;
+                        if (Birthday) {
+                            incrementAge();
+                        }
+                    }
+                    setInterval(checkDate, 24 * 60 * 60 * 1000); // Check every day
+                    document.querySelector('.mySpan').innerHTML = 
+                    "i'am a " + getAge() + " years old guy.";
+                    </script>
                   <p>
-                    Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                    sed. Mauris viverra, erat non sagittis gravida, elit dui
-                    mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                    tincidunt quam vitae neque pharetra dignissim eget ut
-                    libero.
+                    I am currently studying my minor in computer science at Nørre Campus at Copenhagen
                   </p>
+                  <!--
                   <div class="white-button">
                     <a href="#">Read More</a>
                   </div>
+                -->
                 </div>
               </div>
             </div>
@@ -157,7 +182,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-
+      <!--
       <section class="section my-services" data-section="section2">
         <div class="container">
           <div class="section-heading">
@@ -217,6 +242,9 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
+      -->
+
+
       <!--
       <section class="section my-work" data-section="section3">
         <div class="container">
