@@ -28,6 +28,7 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
+
   </head>
 
   <body>
@@ -62,17 +63,29 @@ https://templatemo.com/tm-531-reflux
                 </li>
                 <li>
                   <a href="https://www.strava.com/athletes/51916991">
-                    <i class="fa-brands fa-strava" style="color: #fc5200;"></i
+                    <i class="fa-brands fa-strava" style="color: #ffffff;"></i
                       ></a>
                 </li>
                 <li>
                   <a href="https://www.linkedin.com/in/mark-brandt-a0350b210/?original_referer="
                     ><i class="fa fa-linkedin"></i></a>
                 </li>
+                <li>
+                  <a href="https://github.com/markb5477"
+                    ><i class="fa fa-github"></i></a>
+                </li>
+
               </ul>
             </div>
             <div class="copyright-text">
-              <p></p>
+              <p class="date"></p>
+                <script>
+                  const date = new Date();
+                  var day = date.getDate().toString();
+                  var month = (date.getMonth() + 1).toString();
+                  var year = date.getFullYear().toString();
+                  document.querySelector('.date').innerHTML = "Last updated".italics() + day + "/" + month + "/" + year
+                </script>
             </div>
           </div>
         </div>
@@ -113,11 +126,9 @@ https://templatemo.com/tm-531-reflux
                     }
                     setInterval(checkDate, 24 * 60 * 60 * 1000); // Check every day
                     document.querySelector('.mySpan').innerHTML = 
-                    "i'am a " + getAge() + " years old guy.";
+                    "i'am a " + getAge() + " years old guy, I am currently studying my minor in computer science at the University of Copenhagen";
                     </script>
-                  <p>
-                    I am currently studying my minor in computer science at Nørre Campus at Copenhagen
-                  </p>
+                  
                   <!--
                   <div class="white-button">
                     <a href="#">Read More</a>
@@ -129,11 +140,19 @@ https://templatemo.com/tm-531-reflux
           </div>
           <div class="right-image-post">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="left-text">
-                  <h4>What I like doing</h4>
+                  <h3>My interests</h3>
+                  <h5>Sports</h5>
                   <p>
-                    Some about training <br>
+                    I have from as far as I remember always practiced some kind of sport. 
+                    In my teenage years I swam on an elite level and participated in the the danish championships.
+                    At the moment i like to train various sports, I am currently Training traithlon  
+                  </p>
+                  <h5>Music</h5>
+
+                  <p>
+                    I have <br>
                     some about being with friend <br>
                     some about being in nature <br>
                     some about hiking with friends
@@ -144,11 +163,13 @@ https://templatemo.com/tm-531-reflux
                   </div>
                 </div>
               </div>
+              <!--
               <div class="col-md-6">
                 <div class="right-image">
                   <img src="assets/images/right-image.jpg" alt="" />
                 </div>
               </div>
+              -->
             </div>
           </div>
         </div>
