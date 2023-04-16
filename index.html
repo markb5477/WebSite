@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <script src="https://kit.fontawesome.com/8761f7db91.js" crossorigin="anonymous"></script>
-    <script src="vendor/jquery/date.js"></script>
+    <script src="assets/MyJS/"></script>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -51,7 +51,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#section1">About Me</a></li>
                 <li><a href="#section4">Contact Me </a></li>
                 <!--<li><a href="#section3">My Work</a></li> -->
-                <li><a href="#section4">My blog</a></li>
+                <li><a href="./blog.html">My blog</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -84,7 +84,7 @@ https://templatemo.com/tm-531-reflux
                   var day = date.getDate().toString();
                   var month = (date.getMonth() + 1).toString();
                   var year = date.getFullYear().toString();
-                  document.querySelector('.date').innerHTML = "Last updated".italics() + day + "/" + month + "/" + year
+                  document.querySelector('.date').innerHTML = "Last updated ".italics() + " " + day + "/" + month + "/" + year
                 </script>
             </div>
           </div>
@@ -124,9 +124,10 @@ https://templatemo.com/tm-531-reflux
                             incrementAge();
                         }
                     }
-                    setInterval(checkDate, 24 * 60 * 60 * 1000); // Check every day
+                    setInterval(checkDate(), 24 * 60 * 60 * 1000); // Check every day
                     document.querySelector('.mySpan').innerHTML = 
-                    "i'am a " + getAge() + " years old guy, I am currently studying my minor in computer science at the University of Copenhagen";
+                    "i'am a " + getAge() + 
+                    " years old guy, I am currently studying my minor in computer science at the University of Copenhagen";
                     </script>
                   
                   <!--
@@ -142,15 +143,29 @@ https://templatemo.com/tm-531-reflux
             <div class="row">
               <div class="col-md-12">
                 <div class="left-text">
-                  <h3>My interests</h3>
+                  <!-- <h3>My interests</h3> -->
                   <h5>Sports</h5>
                   <p>
+                    <!--
+                      my sport expereience 
+                        swimming 
+                        always done sports
+                      What i am doing now
+                        hybrid kind of excersising 
+                          olympic weightlifting 
+                          triathlon
+
+                    -->
                     I have from as far as I remember always practiced some kind of sport. 
-                    In my teenage years I swam on an elite level and participated in the the danish championships.
-                    At the moment i like to train various sports, I am currently Training traithlon  
+                    In my teenage years I swam on an elite level and participated in the the danish championships. 
+                    At the moment i like to train various sports, the focus being able to apply the athletic capabilities in the real world. 
+                    I therefore like training traithlon now beacuse it acheives the goal of enhancing my endurance. 
+                    Another sport i like doing is Olympic weightlifting, beacuse it engages the whole body and has a big focus on strengh, 
+                    which triathlon dont suport. 
+
                   </p>
                   <h5>Music</h5>
-
+                  I have always had a big variretty
                   <p>
                     I have <br>
                     some about being with friend <br>
@@ -413,8 +428,7 @@ https://templatemo.com/tm-531-reflux
             <h2>Contact Me</h2>
             <div class="line-dec"></div>
             <span
-              >Mail me at: mark.nicklas.brandt@gmail.com <br>
-              Find my socials on the left sidebar.</span
+              ><br> e-mail: mark.nicklas.brandt@gmail.com</span
             >
           </div>
           <!--
