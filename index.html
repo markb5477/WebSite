@@ -91,11 +91,11 @@ https://templatemo.com/tm-531-reflux
 
                     repos.forEach((repo)=>{
                       if (repo.name == desiredRepo) {
-                        var lastUpdated = new Date(repo.updated_at);
+                        var lastUpdated = new Date(repo.pushed_at);
                         var day = lastUpdated.getDate();
                         var month = lastUpdated.getMonth();
                         var year = lastUpdated.getFullYear();
-                        $(dateTagClass).text(`Last updated: ${day}/${month}/${year}`);
+                        $(dateTagClass).text(`Last updated: ${day}/${month + 1}/${year}`);
                       }
                     });
                   }
