@@ -80,13 +80,29 @@ https://templatemo.com/tm-531-reflux
             </div>
             <div class="copyright-text">
               <p class="date"></p>
-                <script>
-                  const date = new Date();
-                  var day = date.getDate().toString();
-                  var month = (date.getMonth() + 1).toString();
-                  var year = date.getFullYear().toString();
-                  document.querySelector('.date').innerHTML = "Last updated ".italics() + " " + day + "/" + month + "/" + year
-                </script>
+              <script>
+                const desiredRepo = "WebSite";
+                const dateTagClass = ".date";
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let repos = JSON.parse(this.responseText);
+
+                    repos.forEach((repo)=>{
+                      if (repo.name == desiredRepo) {
+                        var lastUpdated = new Date(repo.updated_at);
+                        var day = lastUpdated.getDate();
+                        var month = lastUpdated.getMonth();
+                        var year = lastUpdated.getFullYear();
+                        $(dateTagClass).text(`Last updated: ${day}/${month}/${year}`);
+                      }
+                    });
+                  }
+                };
+              xhttp.open("GET", "https://api.github.com/users/markb5477/repos", true);
+              xhttp.send();
+              </script>
             </div>
           </div>
         </div>
@@ -128,7 +144,7 @@ https://templatemo.com/tm-531-reflux
                     setInterval(checkDate(), 24 * 60 * 60 * 1000); // Check every day
                     document.querySelector('.mySpan').innerHTML = 
                     "i'am a " + getAge() + 
-                    " years old guy, I am currently studying my minor in computer science at the University of Copenhagen";
+                    " years old guy, I am currently studying my minor in computer science at the University of Copenhagen.";
                     </script>
                   
                   <!--
@@ -163,7 +179,7 @@ https://templatemo.com/tm-531-reflux
                     I therefore like training traithlon now beacuse it acheives the goal of enhancing my endurance. 
                     Another sport i like doing is Olympic weightlifting, beacuse it engages the whole body and has a big focus on strengh, 
                     which triathlon dont suport. 
-
+                  <!--
                   </p>
                   <h5>Music</h5>
                   I have always had a big variretty
@@ -174,6 +190,7 @@ https://templatemo.com/tm-531-reflux
                     some about hiking with friends
                     
                   </p>
+                  -->
                 </div>
               </div>
               <!--
@@ -265,14 +282,17 @@ https://templatemo.com/tm-531-reflux
                   </h4>
                 </div>
                 <p>
-                  My blog is a monologue to which I express my opinions and thought about 
-                  <i> stuff </i> &nbsp; that I find interesting or relevant to discuss :).
+                  My blog is where I express my opinions and thought about 
+                  <i> stuff </i> &nbsp; that I find interesting and/or relevant to discuss :).
                 </p>
                 <nav>
                   <div class="white-button">
                     <a href="./blog.html">Go to my blog</a>
                   </div>
+                  <br>
                 </nav>
+                <p>
+                </p>
 
               </div>
               <div class="col-md-6">
@@ -465,9 +485,10 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>Contact Me</h2>
             <div class="line-dec"></div>
-            <span
-              ><br> e-mail: mark.nicklas.brandt@gmail.com</span
-            >
+            <span>
+              <br> 
+              My E-mail: mark.nicklas.brandt@gmail.com <br>
+            </span>
           </div>
           <!--
           <div class="row">
